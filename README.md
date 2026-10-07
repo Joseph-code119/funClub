@@ -117,7 +117,7 @@ fun-club-management/
 ### Setup
 
 ```bash
-# Clone or navigate to the project
+# Navigate to the project
 cd fun-club-management
 
 # Install dependencies
@@ -125,14 +125,22 @@ npm install
 
 # Configure environment
 cp .env.example .env
-# Edit .env with your MySQL credentials and JWT secret
+# Edit .env — set DB_PASSWORD to your MySQL root password
 
-# Create database and tables (when migrations are ready)
-mysql -u root -p < database/schema.sql
+# Start MySQL (macOS, if not running)
+sudo /usr/local/mysql/support-files/mysql.server start
 
-# Start development server (when server.js is implemented)
+# Create database and all tables
+npm run db:setup
+
+# Verify database connection
+npm run db:test
+
+# Start development server
 npm run dev
 ```
+
+The server runs at `http://localhost:3000`. Health check: `http://localhost:3000/api/health`
 
 ## Development Approach
 
@@ -141,3 +149,4 @@ This project is built **in stages**. Stage 1 (current) establishes folder struct
 ## License
 
 MIT — see [LICENSE](LICENSE).
+# funClub
