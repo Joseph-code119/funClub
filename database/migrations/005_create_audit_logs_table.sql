@@ -1,0 +1,12 @@
+-- Migration: audit_logs table
+
+-- CREATE TABLE audit_logs (
+--   id INT AUTO_INCREMENT PRIMARY KEY,
+--   admin_id INT NOT NULL,
+--   action VARCHAR(100) NOT NULL,
+--   entity_type VARCHAR(50),
+--   entity_id INT,
+--   details JSON,
+--   created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+--   FOREIGN KEY (admin_id) REFERENCES users(id)
+-- );

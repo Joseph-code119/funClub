@@ -1,0 +1,18 @@
+-- Migration: contributions table
+-- One member (user) has many contribution records
+
+-- CREATE TABLE contributions (
+--   id INT AUTO_INCREMENT PRIMARY KEY,
+--   user_id INT NOT NULL,
+--   category_id INT NULL,
+--   amount DECIMAL(10, 2) NOT NULL,
+--   description VARCHAR(255),
+--   reference_number VARCHAR(100),
+--   payment_date DATE NOT NULL,
+--   recorded_by INT NOT NULL,
+--   created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+--   updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+--   FOREIGN KEY (user_id) REFERENCES users(id),
+--   FOREIGN KEY (category_id) REFERENCES contribution_categories(id),
+--   FOREIGN KEY (recorded_by) REFERENCES users(id)
+-- );
